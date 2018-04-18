@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=ListaLibros
+comment0.text=\n\ Lista\ de\ libro\ de\ una\ biblioteca\n\ \n\ @author\ (Gonzalo\ Granizo\ 1DAW)\ \n
+comment1.params=
+comment1.target=ListaLibros()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ ListaNodos\n
+comment2.params=valor
+comment2.target=void\ pon(Libro)
+comment3.params=
+comment3.target=boolean\ estaVacia()
+comment4.params=id
+comment4.target=Libro\ quitar(int)
+comment5.params=titulo
+comment5.target=int\ buscarId(java.lang.String)
+comment6.params=
+comment6.target=void\ verCatalogo()
+numComments=7

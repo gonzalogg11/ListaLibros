@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Biblioteca
+comment1.params=argv
+comment1.target=void\ main(java.lang.String[])
+comment2.params=titulo\ lprestados\ ldisponibles
+comment2.target=int\ prestarLibro(java.lang.String,\ ListaLibros,\ ListaLibros)
+comment2.text=\ \ \ Realiza\ el\ prestamos\ pasado\ un\ libro\ de\ la\ lista\ de\ libros\ disponibles\ a\ la\ lista\ de\ libros\ prestados\n\ Devuelve\:\n\ \ 0\ si\ no\ existe\ el\ libro\ en\ niguna\ de\ la\ listas\n\ \ 1\ Si\ puede\ prestarlo,\ el\ libro\ pasa\ de\ ldisponibles\ a\ lprestados\n\ -1\ Si\ ya\ esta\ prestado.\n
+numComments=3
