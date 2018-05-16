@@ -16,12 +16,14 @@ public class Producto{
      * Constructor for objects of class Producto
      */
     
-    public Producto ( int codigo, String nombre, int stock, int stock_min, float precio){
+    public Producto()
+    {
+       
+    }
+    
+    public Producto ( int codigo, String nombre){
         this.codigo = codigo;
         this.nombre = nombre;
-        this.stock = stock;
-        this.stock_min = stock_min;
-        this.precio = precio;
     }
     
     public int getCodigo (){

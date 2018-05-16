@@ -7,7 +7,7 @@
  */
 import java.util.ArrayList;
 public class ModeloArrayList extends ModeloAbs {
-    private ArrayList <Producto> lista;
+    protected ArrayList <Producto> lista;
     
     public ModeloArrayList() {
         lista=new ArrayList <Producto>();

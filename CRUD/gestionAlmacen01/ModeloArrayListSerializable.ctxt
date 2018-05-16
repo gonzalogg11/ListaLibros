@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ModeloArrayListSerializable
+comment1.params=
+comment1.target=ModeloArrayListSerializable()
+comment2.params=
+comment2.target=void\ salvarAfichero()
+comment3.params=
+comment3.target=void\ cargarDesdeFichero()
+comment4.params=p
+comment4.target=boolean\ insertarProducto(Producto)
+comment5.params=codigo
+comment5.target=boolean\ borrarProducto(int)
+comment6.params=nuevo
+comment6.target=boolean\ modificarProducto(Producto)
+numComments=7

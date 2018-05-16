@@ -138,17 +138,23 @@ public class MiAlmacen {
        System.out.print("Introduzca codigo: ");
        int codigo = leerEntero();
        Producto p = almacen.buscarProducto(codigo);
-       if(p != null){
-           System.out.print("Precio Actual: " + p.getPrecio());
-           System.out.print("Introduzca nuevo precio: ");
-           float precio = leerFloat();
-           p.setPrecio(precio);
-           almacen.modificarProducto(p);
-           System.out.println("Operacion realizada");
+       if ( p == null){
+              System.out.println("El producto no se encuentra en almacen");
         }
-       else{
-           System.out.println("Aún no disponible");
+       else {
+           System.out.println("PRODUCTO "+p);
         }
+        System.out.print("Introduzca el precio nuevo:");
+        float precio = leerFloat();
+        if ( precio > 0){
+             p.setPrecio(precio);
+             almacen.modificarProducto(p);
+             System.out.println("Producto actualizado");
+            }
+        else {
+            System.out.println("El precio debe ser mayor que cero");
+        }
+        
     }
 
     // Incrementa el stock
@@ -176,18 +182,21 @@ public class MiAlmacen {
          System.out.print("Introduzca codigo: ");
        int codigo = leerEntero();
        Producto p = almacen.buscarProducto(codigo);
-       if(p != null){
-           System.out.print("Stock Actual: " + p.getPrecio());
-           System.out.print("Introduzca cantidad a vender: ");
-           int Stock = leerEntero();
-           p.setStock(p.getStock()-Stock);
-           almacen.modificarProducto(p);
-           System.out.println("Producto vendido");
+       if ( p == null){
+              System.out.println("El producto no se encuentra en almacen");
         }
-       else{
-           System.out.println("Aún no disponible");
+       else {
+        System.out.println("PRODUCTO "+p);
+        System.out.print("Introduzca cantidad a vender:");
+        int cantidad = leerEntero();
+        if ( cantidad > p.getStock()){
+            System.out.println("No hay unidades suficientes.");
+        } else {
+             p.setStock(p.getStock()-cantidad);
+             almacen.modificarProducto(p);
+             System.out.println("Producto actualizado");
         }
-       
+       }
     }
     
     // Listado de todos los productos
@@ -225,7 +234,7 @@ public class MiAlmacen {
        int stock_min = leerEntero();
        System.out.println("Introduce precio del producto:");
        Float precio = leerFloat();
-       Producto nuevo = new Producto(codigo, nombre, stock, stock_min, precio);
+       Producto nuevo = new Producto(codigo, nombre);
        boolean creado = almacen.insertarProducto(nuevo);
        if (creado == true) {
            System.out.println("Producto creado");
